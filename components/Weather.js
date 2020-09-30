@@ -24,6 +24,7 @@ export default function Weather(props) {
                     console.log('json: ', json.weather)
                     // console.log(json.weather[0].main)
                     setForecastInfo({
+                        name:json.name,
                         main: json.weather[0].main,
                         description: json.weather[0].description,
                         temp: json.main.temp,
