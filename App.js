@@ -35,7 +35,7 @@ function WeatherStackScreen() {
         headerStyle: { backgroundColor: '#000' },
       }}>
       <WeatherStack.Screen name="Location" component={ZipCodeScreen} />
-      <WeatherStack.Screen name="Weather" component={Weather} />
+      <WeatherStack.Screen name="Weather" component={WeatherScreen} />
     </WeatherStack.Navigator>
   );
 }
@@ -48,16 +48,15 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
+          tabBarIcon: ({color, size }) => {
             let iconName;
-
             if (route.name === 'Home') {
               iconName = 'ios-home'
             } else if (route.name === 'Location') {
               iconName = 'ios-sunny'
             }
 
-            // You can return any component that you like here!
+           
             return <Ionicons name={iconName} size={size} color={color} />;
           }
         })}
