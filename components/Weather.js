@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+import { View, Text, ImageBackground, StyleSheet ,Image} from 'react-native';
 import Forecast from './Forecast';
 import ZipCodeScreen from './ZipCodeScreen';
 
@@ -28,6 +28,7 @@ export default function Weather(props) {
                         main: json.weather[0].main,
                         description: json.weather[0].description,
                         temp: json.main.temp,
+                        icon : json.weather[0].icon
                     });
                 })
                 .catch((error) => {
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         width: '100%',
         height: 250,
-        opacity: 0.4,
+        
         alignItems: 'center',
     },
     medium: {
