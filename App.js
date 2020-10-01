@@ -18,7 +18,7 @@ function HomeStackScreen() {
     <HomeStack.Navigator
       screenOptions={{
         headerTintColor: 'white',
-        headerStyle: { backgroundColor: '#000' },
+        headerStyle: { backgroundColor: '#FFC300' },
       }}>
       <HomeStack.Screen name="Home" component={HomeScreen} />
     </HomeStack.Navigator>
@@ -32,7 +32,7 @@ function WeatherStackScreen() {
     <WeatherStack.Navigator
       screenOptions={{
         headerTintColor: 'white',
-        headerStyle: { backgroundColor: '#000' },
+        headerStyle: { backgroundColor: '#FFC300' },
       }}>
       <WeatherStack.Screen name="Location" component={ZipCodeScreen} />
       <WeatherStack.Screen name="Weather" component={WeatherScreen} />
@@ -59,9 +59,13 @@ const App = () => {
           }
         })}
         tabBarOptions={{
-          activeTintColor: '#fff',
-          inactiveTintColor: 'gray',
-          style: { backgroundColor: '#000' }
+          activeTintColor: '#319478',
+          inactiveTintColor: '#FF9B14',
+          style: {backgroundColor:'rgba(255,255,255,0.3)',
+          position: 'absolute',
+          elevation: 0 ,
+
+        }
         }}
 
       >
@@ -73,13 +77,4 @@ const App = () => {
 };
 
 
-
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-//make this component available to the app
 export default App;

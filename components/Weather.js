@@ -67,7 +67,7 @@ export default function Weather(props) {
                     <Text style={styles.medium}>
                         {props.zipCode
                             ? 'Zipcode : ' + props.zipCode
-                            : null }
+                            : 'Welcome' }
                     </Text>
                     <Forecast {...forecastInfo} />
                 </View>

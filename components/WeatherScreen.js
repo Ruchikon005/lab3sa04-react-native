@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 
 export default function WeatherScreen({route}) {    
     return (
-        <View style={{backgroundColor:'red',width:'100%',height:'100%'}}>
+        <View style={{backgroundColor:'#FFC300',width:'100%',height:'100%'}}>
             <Weather zipCode={route.params.zipCode} />
             <StatusBar style="auto" />
         </View>

@@ -15,7 +15,7 @@ const ZipItem = ({ place, code, navigation }) => (
     <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code},{zipCode : place})}>
         <View style={styles.container}>
             <View style={{flex: 1}}>
-                <Text style={{fontSize: 25}}>{place}</Text>
+                <Text style={{fontSize: 25,color:'#319478'}}>{place}</Text>
             </View>
             <View style={styles.container1}>
                 <Text style={styles.text}>{code}</Text>
@@ -29,7 +29,7 @@ const _keyExtractor = item => item.code
 export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
-        <View style={{backgroundColor:'red',width:'100%',height:'100%'}}>
+        <View style={{backgroundColor:'#FFC300',width:'100%',height:'100%'}}>
             <FlatList
                 data={availableZipItems}
                 keyExtractor={_keyExtractor}
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         
         fontSize: 15,
         textAlign: "right",
-        
+        color:'#319478',
     },
     container1: {
         flexDirection:'column',
