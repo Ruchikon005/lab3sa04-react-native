@@ -48,15 +48,13 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({color, size }) => {
+          tabBarIcon: ({ color, size }) => {
             let iconName;
             if (route.name === 'Home') {
               iconName = 'ios-home'
             } else if (route.name === 'Location') {
               iconName = 'ios-sunny'
             }
-
-           
             return <Ionicons name={iconName} size={size} color={color} />;
           }
         })}
@@ -67,7 +65,6 @@ const App = () => {
         }}
 
       >
-
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Location" component={WeatherStackScreen} />
       </Tab.Navigator>

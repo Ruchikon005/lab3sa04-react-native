@@ -29,7 +29,7 @@ const _keyExtractor = item => item.code
 export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
-        <View>
+        <View style={{backgroundColor:'red',width:'100%',height:'100%'}}>
             <FlatList
                 data={availableZipItems}
                 keyExtractor={_keyExtractor}
